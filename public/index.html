@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="ToDoListApp">
+  <head>
+    <meta charset="utf8">
+    <title>To do list</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/addtolistcontroller.js"></script>
+  </head>
+
+  <body ng-controller="itemsController as itemsCtrl">
+    <div class="container">
+      <form>
+        <input class="form-control" type="text" name="todo" placeholder="what do you need to do?" ng-model="itemsCtrl.newTodo" required>
+        <input type="submit" id="Add" ng-click="itemsCtrl.addToDo()" />
+      </form>
+      <section>
+        <p>To do</p>
+        <ul ng-repeat="todo in itemsCtrl.items['todo']" class="list-group">
+          <li class="list-group-item"><input id="toDo" type="checkbox" >{{todo}}</li>
+        </ul>
+        <p>Done</p>
+        <ul ng-repeat="todo in itemsCtrl.items['done']" class="list-group">
+          <li class="list-group-item"><input id="done" type="checkbox" >{{todo}}</li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>

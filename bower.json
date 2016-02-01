@@ -1,0 +1,27 @@
+{
+  "name": "ma-todolist-challenge",
+  "description": "![makersacademy](https://github.com/allimac/resources/blob/master/ma_logo.png)",
+  "main": "index.js",
+  "authors": [
+    "allimac <camillacolser@hotmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/allimac/ma-todolist-challenge",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "bootstrap": "^3.3.6",
+    "angular": "^1.4.9",
+    "angular-resource": "^1.4.9"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.4.9"
+  }
+}
